@@ -1,7 +1,7 @@
 ---
 title: "Hardware-Software Co-Design for Parallel Execution of Arbitrary Quantum Algorithms on Distributed Systems"
 collection: publications
-category: manuscripts
+# category: manuscripts
 # permalink: /publication/nv-arch
 excerpt: '<i>Under Review</i>.'
 date: 2025-01-01

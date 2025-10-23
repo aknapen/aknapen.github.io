@@ -1,7 +1,7 @@
 ---
 title: "Pinball: A Cryogenic Predecoder for Quantum Error Correction Under Circuit-Level Noise"
 collection: publications
-category: conferences
+# category: conferences
 # permalink: /publication/pinball
 excerpt: '<i>Under Review</i>.'
 date: 2025-09-25
