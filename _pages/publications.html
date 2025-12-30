@@ -11,8 +11,6 @@ author_profile: true
 
 {% include base_path %}
 
-<p>Coming soon!</p>
-
 <!-- New style rendering if publication categories are defined -->
 {% if site.publication_category %}
   {% for category in site.publication_category %}
@@ -22,12 +20,17 @@ author_profile: true
         {% continue %}
       {% endif %}
       {% unless title_shown %}
-        <br><h1>{{ category[1].title }}</h1><hr />
+        <h2>{{ category[1].title }}</h2><hr>
         {% assign title_shown = true %}
       {% endunless %}
       {% include archive-single.html %}
     {% endfor %}
   {% endfor %}
+  <footer class="page__meta" style="margin-top: 2em; border-top: 1px solid var(--global-border-color); padding-top: 1em;">
+  <p style="font-size: 0.8em; font-style: italic; color: var(--global-text-color);">
+    * = authors contributed equally
+  </p>
+</footer>
 {% else %}
   {% for post in site.publications reversed %}
     {% include archive-single.html %}
