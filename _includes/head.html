@@ -4,6 +4,23 @@
 
 {% include seo.html %}
 
+<!-- Ensures the right color theme is immediately rendered
+when a new page loads -->
+<script>
+  (function() {
+    // Check for saved theme in localStorage
+    const savedTheme = localStorage.getItem('theme');
+    // Check for system preference
+    const userPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    if (savedTheme === 'dark' || (!savedTheme && userPrefersDark)) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    } else {
+      document.documentElement.setAttribute('data-theme', 'light');
+    }
+  })();
+</script>
+
 <link href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ base_path }}/feed.xml{% endif %}" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
 
 <!-- http://t.co/dKP3o1e -->
