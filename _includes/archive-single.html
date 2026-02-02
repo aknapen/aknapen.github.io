@@ -98,6 +98,12 @@
             <i class="fab fa-fw fa-github"></i> Code
           </a>
         {% endif %}
+
+        {% if post.slidesurl %}
+          <a href="{{ post.slidesurl }}" class="btn btn-pop" download>
+            <i class="fas fa-file-powerpoint"></i> Slides
+          </a>
+        {% endif %}
       </div>
     </div>
 
